@@ -27,13 +27,6 @@ public class TimeRecordWriter {
         playerName = username;
     }
 
-    public synchronized PlayTimeRecord loadPlayTimeRecord() {
-        ArrayList<PlayTimeRecord> r = loadPlayTimeRecords();
-        if (r.size() > 0)
-            return r.get(0);
-        return null;
-    }
-
     public synchronized ArrayList<PlayTimeRecord> loadPlayTimeRecords()
     {
         if (playerName == null) {
@@ -69,12 +62,6 @@ public class TimeRecordWriter {
         }
 
         return data;
-    }
-
-    public synchronized boolean writePlayTimeFile(PlayTimeRecord rec) {
-        ArrayList<PlayTimeRecord> r = new ArrayList<PlayTimeRecord>();
-        r.add(rec);
-        return writePlayTimeFile(r);
     }
 
     public synchronized boolean writePlayTimeFile(final ArrayList<PlayTimeRecord> times)

@@ -4,26 +4,26 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
+@ConfigGroup("play-time")
 public interface PlayTimeConfig extends Config
 {
 	@ConfigItem(
-			keyName = "startHours",
-			name = "Current in-game hours",
-			description = "Hours from Hans to offset the counter"
+			keyName = "showAverages",
+			name = "Show Averages",
+			description = "Show average values for week and month."
 	)
-	default String startHours()
+	default boolean showAverages()
 	{
-		return "0";
+		return false;
 	}
 
 	@ConfigItem(
-			keyName = "startMinutes",
-			name = "Current in-game minutes",
-			description = "Minutes from Hans to offset the counter"
+			keyName = "showSeconds",
+			name = "Show Seconds",
+			description = "Show seconds on times"
 	)
-	default String startMinutes()
+	default boolean showSeconds()
 	{
-		return "0";
+		return false;
 	}
 }

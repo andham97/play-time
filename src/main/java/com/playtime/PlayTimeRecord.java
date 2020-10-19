@@ -7,13 +7,13 @@ import lombok.Data;
 @AllArgsConstructor
 public class PlayTimeRecord {
     private String date;
-    private int time;
+    private long time;
 
-    public int getTime() {
+    public long getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(long time) {
         this.time = time;
     }
 
