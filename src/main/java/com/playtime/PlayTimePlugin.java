@@ -227,6 +227,7 @@ public class PlayTimePlugin extends Plugin
 			case HOPPING:
 			case CONNECTION_LOST:
 				ready = true;
+				panel.showView();
 				break;
 			case LOGGED_IN:
 				if (ready)
@@ -234,6 +235,7 @@ public class PlayTimePlugin extends Plugin
 					loadData();
 					ready = false;
 				}
+				panel.showView();
 				break;
 			case LOGIN_SCREEN:
 				sessionTicks = 0;
